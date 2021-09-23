@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>தமிழ்ச்சொல் பகுப்பாய்வு </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+		table, th, td {
+			border: 2px solid black;
+			border-collapse: collapse;
+		}
+		th, td {
+			padding: 10px;
+		}
+		table.center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h1 {
+			background-color: lightblue;
+			opacity: 0.9;
+		}
+
+		div {
+			background-color: lightblue;
+		}
+
+		p {
+			background-color: yellow;
+		}
+		
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <h1>தமிழ்ச்சொல்</h1>
+    <form role="form" method="POST" action="/">
+      <div class="form-group">
+		<input type="text" name="title" placeholder="சொற்றொடர் உள்ளிடுக..." size="50" style="max-width: 600px;" autofocus required>
+      </div>
+       <button type="submit" class="btn btn-default">ஆராய்க..</button>
+    </form>
+	<br>
+	<br>
+	<h4>பகுப்பாய்வு - {{form_value}}</h4>
+	<div> 
+	<table class="table table-striped" style="width:800px">
+	    <thead>
+		<tr class="success">
+			<th>எழுத்து வகை</th>
+			<th>எண்ணிக்கை</th>
+		</tr>
+		</thead>
+		<tr>
+			<td>உயிர் எழுத்துக்கள் </td>
+			<td>{{uyir_value}}</td>
+		</tr>
+		<tr>
+			<td>உயிர் குறில்</td>
+			<td>{{uyirkuril_value}}</td>
+		</tr>
+		<tr>
+			<td>உயிர் நெடில் </td>
+			<td>{{uyirnaedil_value}}</td>
+		</tr>
+		<tr>
+			<td> மெய் எழுத்துகள்</td>
+			<td>{{mei_value}}</td>
+		</tr>
+		<tr>
+			<td>உயிர் மெய்</td>
+			<td>{{uyirmei_value}}</td>
+		</tr>
+		<tr>
+			<td>உயிர்மெய் குறில்</td>
+			<td>{{uyirmeikuril_value}}</td>
+		</tr>
+		<tr>
+			<td>உயிர்மெய் நெடில்</td>
+			<td>{{uyirmeinaedil_value}}</td>
+		</tr>		
+
+	</table>
+	</div>
+	</div>
+  </body>
+</html>
