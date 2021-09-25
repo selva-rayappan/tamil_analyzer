@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 
 
 class Literal(db.Model):
-    title = db.Column(db.String(1000), unique=True, nullable=False, primary_key=True)
+    word = db.Column(db.String(1000), unique=True, nullable=False, primary_key=True)
     length = db.Column(db.Integer)
 
     def __repr__(self):
@@ -36,8 +36,8 @@ def home():
     
     if request.form:
         try:
-            literal = Literal(title=request.form.get("title"),length=len(request.form.get("title")))
-            string_inp = request.form.get("title")
+            literal = Literal(word=request.form.get("word"),length=len(request.form.get("word")))
+            string_inp = request.form.get("word")
             #db.session.add(literal)
             #db.session.commit()
             uyir_dict,mei_dict,uyirmei_dict,uyirkuril_dict,uyirnaedil_dict,uyirmeikuril_dict,uyirmeinaedil_dict,tamil_dict = getLetterCount(string_inp)
