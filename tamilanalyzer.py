@@ -19,7 +19,7 @@ class Literal(db.Model):
     length = db.Column(db.Integer)
 
     def __repr__(self):
-        return f'(name={self.title}, age={self.length})'
+        return f'(name={self.word}, age={self.length})'
 
 @app.route('/', methods=["GET", "POST"])
 def home():
