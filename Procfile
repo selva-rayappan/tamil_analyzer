@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT tamilanalyzer:tamilanalyzer
+web: gunicorn tamilanalyzer:app
