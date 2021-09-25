@@ -45,9 +45,9 @@ def getLetterCount(word):
                 else:
                     uyirmeinaedil_dict[literal] +=1
                     
-    for item in uyirmei_dict:
-        if uyirmei_dict[item] > 0:
-            print(item,uyirmei_dict[item])
+    #for item in uyirmei_dict:
+    #    if uyirmei_dict[item] > 0:
+    #        print(item,uyirmei_dict[item])
     
     uyir_dict = {key:val for key, val in uyir_dict.items() if val != 0}
     mei_dict = {key:val for key, val in mei_dict.items() if val != 0}
@@ -59,5 +59,3 @@ def getLetterCount(word):
     tamil_dict = {key:val for key, val in tamil_dict.items() if val != 0}
     
     return uyir_dict,mei_dict,uyirmei_dict,uyirkuril_dict,uyirnaedil_dict,uyirmeikuril_dict,uyirmeinaedil_dict,tamil_dict
-
-getLetterCount('அகரம்அ')
